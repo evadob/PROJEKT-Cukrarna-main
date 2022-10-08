@@ -1,0 +1,228 @@
+/* intuitivnější box-sizing pro všechny prvky na stránce */
+html {
+  box-sizing: border-box;
+}
+*,
+::before,
+::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+/*
+	Poznámky:
+	- maximální šířka obsahu uvnitř sekcí je 1100px
+	- "pruh" s obsahem obsah je vycentrovaný na stránce
+	- všechny sekce mají nahoře a dole padding 80px
+	- kromě hlavičky a patičky, které mají jen 30px
+	- nadpisy jsou fontem Playfair Display, tučně
+	- veškerý další text na stránce fontem Lora
+	- výchozí velikost textu na stránce je 18px, řádkování 1.5
+
+	Velikosti nadpisů:
+	h1 - 52px  (nadpis v horní Hero sekci s cupcakem)
+	h2 - 36px  (nadpisy v dalších sekcích)
+	h3 - 18px  (název produktu v Dnešní nabídce)
+	Nadpisy mají řádkování jen 1.25
+
+	Barvy:
+	#f195b2		růžová - tlačítka a zvýraznění
+	#d2567d		tmavá růžová - hover/aktivní tlačítka
+	#3e606b		tmavá tyrkysová - na nadpisy
+	#242424		(skoro) černá - na běžný text
+	#f0f0f0		světle šedé pozadí prostřední sekce
+	#303339		tmavé pozadí patičky
+*/
+
+body {
+  line-height: 1.5;
+}
+
+section {
+  max-width: 1100px;
+}
+
+img {
+  vertical-align: bottom;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Playfair Display", serif;
+}
+
+h1 {
+  font-size: 52px;
+  padding-bottom: 30px;
+  margin-right: 50%;
+}
+
+h2 {
+  font-size: 36px;
+  padding-bottom: 30px;
+  color: #3e606b;
+}
+
+h3 {
+  font-size: 18px;
+  padding-top: 20px;
+  color: #3e606b;
+}
+
+button {
+  font-family: "Lora", serif;
+}
+
+.two-columns {
+  display: flex;
+  max-width: 1100px;
+  margin: 80px auto;
+  gap: 30px;
+}
+
+header {
+  display: flex;
+  margin: auto;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1100px;
+}
+
+.logo {
+  width: 170px;
+  padding: 30px 0;
+}
+
+.menu li {
+  display: inline-block;
+  font-size: 18px;
+}
+
+a {
+  text-decoration: none;
+  color: #242424;
+  margin: 20px;
+}
+
+.btn-online-objednavka {
+  background-color: #f195b2;
+  padding: 10px 15px;
+  color: white;
+  border: none;
+  border-radius: 30px;
+}
+
+.btn-online-objednavka:hover {
+  background-color: #d2567d;
+  cursor: pointer;
+}
+
+section {
+  margin: 0 auto;
+}
+
+.bcg-pic {
+  background-image: url(images/cupcake.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 100%;
+}
+
+.hero {
+  margin: auto;
+
+  color: white;
+  padding: 80px 0 80px 0;
+}
+
+.hero-text {
+  font-size: 24px;
+  margin-right: 50%;
+  font-style: italic;
+}
+
+.column > p {
+  margin-bottom: 30px;
+}
+
+.column > img {
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px,
+    rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
+  border-radius: 5px;
+}
+
+.btn-vyrobky {
+  background-color: #f195b2;
+  padding: 10px 15px;
+  color: white;
+  border: none;
+  border-radius: 30px;
+}
+
+.btn-vyrobky:hover {
+  background-color: #d2567d;
+  cursor: pointer;
+}
+
+.bcg-clr {
+  background-color: #f0f0f0;
+  background-size: cover;
+}
+
+.dnesni-nabidka {
+  padding-top: 80px;
+  padding-bottom: 80px;
+  margin: 0 auto;
+}
+
+.section-content > p {
+  margin-bottom: 20px;
+}
+
+.h2-nabidka {
+  margin: 0 auto;
+}
+
+.nabidka {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.nabidka-img {
+  width: calc(1010px / 4);
+  border-radius: 5px 5px 0 0;
+}
+
+.about-cake {
+  background-color: white;
+  border-radius: 0 0 5px 5px;
+  width: calc(1010px / 4);
+  text-align: center;
+}
+
+.about-cake > h2 {
+  margin-top: 20px;
+}
+
+.p-dortik {
+  padding: 20px;
+}
+
+.produkt {
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px,
+    rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
+  border-radius: 0 0 5px 5px;
+}
+
+.footer {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 30px 0;
+  width: 100%;
+  text-align: center;
+  color: white;
+  background-color: #303339;
+}
